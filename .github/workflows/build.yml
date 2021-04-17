@@ -14,14 +14,12 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: build
-        run:
-          - mkdir build && cd build
-          - cmake ..
-          - cd ..
-          - NUMBER_OF_PROCESSORS=$(nproc --all)
-          # Wraps the compilation with the Build Wrapper to generate configuration (used
-          # later by the SonarQube Scanner) into the "bw-output" folder
-          - build-wrapper-linux-x86-64 --out-dir bw-output cmake --build build/
+        run: |
+          mkdir build && cd build
+          cmake ..
+          cd ..
+          NUMBER_OF_PROCESSORS=$(nproc --all)
+          build-wrapper-linux-x86-64 --out-dir bw-output cmake --build build/
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
