@@ -1,17 +1,14 @@
 sudo: false
 
-dist: bionic
-
 addons:
   sonarcloud:
     organization: "huuanhhuynguyen"
-    token: Nw5G3DSc0RKTtxaiyvw2r98OethVi/VrwysuHTxxOzA83m6/6URtHR4TFXtXVWImKJYiuSJvMRWAZrU4UKmraRTeO9+PG/2JCE/799zqoRNMjKEVw5d9pwd5PAo0okbIaj5Uxxw9XL43QDtWaslCSO4OkXj/625G0WEq/GE2Fo825OWgG7cluzKHmW0kLZWQBw726h4bPv5Orfen8Rthi2Db1/5P/Achzxxsx2nwZLDMHB4i78yWGevTd+QMGygMxNZi2a9DRECxVqUBJhrQUm0q27PcVB6iuTuo0yTHX+C/dB2Ai7ZZYFXNNsDyZegKWO5oGn98N8J+O1s8456o2nqHkf93kcUs9l1CJR6JJxGx2R/IQbYt/KJFPaO5wO70HS4SGgLPjvwtTUpR48i6f9xDIWumCCNyxlRo/9W5D/srSST00eKozEuU3w6gcXXkqfKFrbrzlm5zoK1fIAAWttEtAkJ52ml0XRruCESjRGVMtxo8acKygnbVy7KKLa/ldLJKB4Us9zA/JuW/EXWjo2+tgQapjxtUVmhpmoirRVNZTif+59Dgs0ZLaejKZRG7FnpjlyKgkbTcti+OLoQLjqGSfLkUbF9LuOSSOGzErgHXSltyGDOaPAKe4Q+ahXRptpKiBUJQ+F61KE4OE6rSIWBdxZ17MvB5GVPoSkuwtHQ=
+    token: "Nw5G3DSc0RKTtxaiyvw2r98OethVi/VrwysuHTxxOzA83m6/6URtHR4TFXtXVWImKJYiuSJvMRWAZrU4UKmraRTeO9+PG/2JCE/799zqoRNMjKEVw5d9pwd5PAo0okbIaj5Uxxw9XL43QDtWaslCSO4OkXj/625G0WEq/GE2Fo825OWgG7cluzKHmW0kLZWQBw726h4bPv5Orfen8Rthi2Db1/5P/Achzxxsx2nwZLDMHB4i78yWGevTd+QMGygMxNZi2a9DRECxVqUBJhrQUm0q27PcVB6iuTuo0yTHX+C/dB2Ai7ZZYFXNNsDyZegKWO5oGn98N8J+O1s8456o2nqHkf93kcUs9l1CJR6JJxGx2R/IQbYt/KJFPaO5wO70HS4SGgLPjvwtTUpR48i6f9xDIWumCCNyxlRo/9W5D/srSST00eKozEuU3w6gcXXkqfKFrbrzlm5zoK1fIAAWttEtAkJ52ml0XRruCESjRGVMtxo8acKygnbVy7KKLa/ldLJKB4Us9zA/JuW/EXWjo2+tgQapjxtUVmhpmoirRVNZTif+59Dgs0ZLaejKZRG7FnpjlyKgkbTcti+OLoQLjqGSfLkUbF9LuOSSOGzErgHXSltyGDOaPAKe4Q+ahXRptpKiBUJQ+F61KE4OE6rSIWBdxZ17MvB5GVPoSkuwtHQ="
+
 script:
   - sonar-scanner
 
 cache:
   directories:
     - $HOME/.sonar/cache
-    # This contains the CFamily cache. According to https://docs.travis-ci.com/user/caching/#pull-request-builds-and-caches,
-    # for a PR, it will use the cache of the target branch if the branch of the PR does not already have its cache.
     - $HOME/.cfamily
