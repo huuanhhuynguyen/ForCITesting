@@ -3,9 +3,7 @@ sudo: false
 addons:
   sonarcloud:
     organization: "huuanhhuynguyen"
-    token:
-      secure: "iean5So94X8zkAXTewRXyEADK+8sJFWEWTD7DegvDw34QOrNkof+vp45yx1kWB4ql+wZsJijs4oCpZc4TTx++f3ZT6927HGoDY5aV0go42MogGg/ZFHHhf/lCh4XaYPTZpMX3z2Fc2Iz0IesnJNDZAeaBnRT8tDTO/3C7Ccyp/3FfVSFTkoRWScHAFL+g0mntTCJ2IRQPBlap2FXhg6/rWo1gBdGAYmrlj1/o6cHgYVLnn06//O0Gp0pc4RXL2n68Cd1Ottyx3xnMhmQm9biyBGnuzv5nuyN8JoRdub4Y31fZf6fqGWN06a6xB1BQirQNhskLOdXb8Mr1MFXeL4Eao6oZwELkDQaO6zHJsK2EjD96N0mevWO/xVly5+1bclLimU7oyJ6vuZuT66g3NBP6LHVa9odXoG1oWic1GNyIgWsv4UU1MuMaMw9y1jqFsj9SxPYO+3/NN1FvIKRYzJJ+CzOg/ZEGdEQRxhnEKCLIneWqymFlMwgSRPKYr7jj6jwMESoQ6eQAXxX6ZiPSmziYdVXWGAHdOtRuRqOYS+HMKyfkUt1GDLzY1NBDVJKg+P9r3QwfRoCMlhHSOVx0Fsb/Fgql7JNQaFM0OolXU9YKaL3WDh+5oxKsxjXEZvBhCqmsZ6qHBXkCWNghXeGSZ1JIU+bxzCACBATiZfVdw+ldLU="
-
+    token: $SONAR_TOKEN
 script:
   # Prepare the build system
   - mkdir build
